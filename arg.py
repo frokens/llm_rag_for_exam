@@ -135,7 +135,7 @@ def ask():
 
         result = qa_chain.invoke({"query": question})
         answer = result.get('result', "抱歉，我无法从文档中找到答案。")
-        return jsonify({'answer': answer})
+        return jsonify({'answer': answer})  
 
     except Exception as e:
         logging.error(f"处理问题时出错: {e}", exc_info=True)
